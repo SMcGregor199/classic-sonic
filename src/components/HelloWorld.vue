@@ -1,6 +1,9 @@
 <script setup>
 defineProps({
-	msg: String,
+	msg: {
+		type: String,
+		default: "Default Message"
+	},
 	customMsg: String
 });
 </script>
