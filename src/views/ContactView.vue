@@ -1,6 +1,14 @@
+<script setup>
+import { useGamesStore } from '@/stores/games.js';
+const games = useGamesStore();
+</script>
 <template>
     <div class="about">
-        <h1>Contact</h1>
+        <ul>
+            <li v-for="game in games.list">
+                {{ game.title }}
+            </li>
+        </ul>
     </div>
 </template>
 
